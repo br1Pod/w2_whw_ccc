@@ -8,11 +8,11 @@ class TestSong(unittest.TestCase):
     
     def setUp(self):
             # sample rooms
-        self.room1 = Room("Compton Crib", 20, 0, "Hip Hop")
-        self.room2 = Room("Soul Shack", 20, 0, "Soul")
+        self.room1 = Room("Compton Crib", 30, 0, "Hip Hop")
+        self.room2 = Room("Soul Shack", 25, 0, "Soul")
         self.room3 = Room("Nashville Nook", 20, 0, "Country")
         self.room4 = Room("Pop Pad", 20, 0, "Chart")
-        self.room5 = Room("School of Rock", 20, 0, "Rock")
+        self.room5 = Room("School of Rock", 25, 0, "Rock")
 
         # sample guests
         self.guest1 = Guest("Lil T", 23, 40, "Hip Hop")
@@ -43,3 +43,9 @@ class TestSong(unittest.TestCase):
 
     def test_song_has_title(self):
         self.assertEqual("Cryin an Drinkin", self.song3.title)
+
+    def test_song_has_artist(self):
+        self.assertEqual("Doctah Dolla", self.song2.artist)
+
+    def test_song_has_genre(self):
+        self.assertEqual("Soul", self.song3.genre)

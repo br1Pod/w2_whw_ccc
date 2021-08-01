@@ -8,11 +8,11 @@ class TestRoom(unittest.TestCase):
 
     def setUp(self):
         # sample rooms
-        self.room1 = Room("Compton Crib", 20, 0, "Hip Hop")
-        self.room2 = Room("Soul Shack", 20, 0, "Soul")
+        self.room1 = Room("Compton Crib", 30, 0, "Hip Hop")
+        self.room2 = Room("Soul Shack", 25, 0, "Soul")
         self.room3 = Room("Nashville Nook", 20, 0, "Country")
         self.room4 = Room("Pop Pad", 20, 0, "Chart")
-        self.room5 = Room("School of Rock", 20, 0, "Rock")
+        self.room5 = Room("School of Rock", 25, 0, "Rock")
 
         # sample guests
         self.guest1 = Guest("Lil T", 23, 40, "Hip Hop")
@@ -43,3 +43,12 @@ class TestRoom(unittest.TestCase):
 
     def test_room_has_name(self):
         self.assertEqual("Compton Crib", self.room1.name)
+
+    def test_room_has_capacity(self):
+        self.assertEqual(25, self.room2.capacity)
+
+    def test_room_has_till(self):
+        self.assertEqual(0, self.room3.till)
+
+    def test_room_has_genre(self):
+        self.assertEqual("Chart", self.room4.genre)
