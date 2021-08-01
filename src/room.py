@@ -5,6 +5,9 @@ class Room:
         self.capacity = capacity
         self.till = till
         self.genre = genre
+        self.room = []
         self.playlist = []
         self.vibe = 0
         
+    def open_room(self, room):
+        return self.room.append(room)
